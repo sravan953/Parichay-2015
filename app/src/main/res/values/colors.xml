@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorLightBlue">#03A9F4</color>
+    <color name="colorLightBlueDark">#0288D1</color>
+
+    <color name="colorEventsFragment">#3F51B5</color>
+    <color name="colorEventsFragmentDark">#303F9F</color>
+
+    <color name="colorUpdatesFragment">#009688</color>
+    <color name="colorUpdatesFragmentDark">#00796B</color>
+
+    <color name="colorResultsFragment">#8BC34A</color>#
+    <color name="colorResultsFragmentDark">#689F38</color>#
+
+    <color name="colorPointsFragment">#FF9800</color>
+    <color name="colorPointsFragmentDark">#F57C00</color>
+</resources>
