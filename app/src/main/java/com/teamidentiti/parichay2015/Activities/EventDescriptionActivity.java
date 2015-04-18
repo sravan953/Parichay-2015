@@ -4,7 +4,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
+import android.transition.Slide;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -25,6 +25,8 @@ public class EventDescriptionActivity extends ActionBarActivity {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(getResources().getColor(R.color.colorLightBlueDark));
             window.setNavigationBarColor(getResources().getColor(R.color.colorLightBlueDark));
+            window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+            window.setEnterTransition(new Slide());
         }
         super.onCreate(savedInstanceState);
 
@@ -41,6 +43,6 @@ public class EventDescriptionActivity extends ActionBarActivity {
         event.setText(eventText);
         venue.setText(MainActivity.eventsData.get(MainActivity.eventsData.indexOf(eventText)+1));
         time.setText(MainActivity.eventsData.get(MainActivity.eventsData.indexOf(eventText)+3));
-        desc.setText(MainActivity.eventsData.get(MainActivity.eventsData.indexOf(eventText)+2));
+        desc.setText(MainActivity.eventsData.get(MainActivity.eventsData.indexOf(eventText) + 2));
     }
 }

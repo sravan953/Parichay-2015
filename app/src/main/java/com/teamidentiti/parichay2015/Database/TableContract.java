@@ -24,7 +24,7 @@ public class TableContract {
     public static final class PointsContract implements BaseColumns {
         public static final String TABLE_NAME = "PointsTable";
 
-        public static final String COLUMN_EVENT = "Event";
+        public static final String COLUMN_BRANCH = "Branch";
         public static final String COLUMN_POINTS = "Points";
     }
 }

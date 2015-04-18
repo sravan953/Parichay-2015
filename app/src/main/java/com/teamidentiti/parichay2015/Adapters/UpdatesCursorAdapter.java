@@ -29,7 +29,7 @@ public class UpdatesCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        ((TextView)view.findViewById(R.id.msg)).setText(cursor.getString(cursor.getColumnIndex(TableContract.MessagesContract.COLUMN_MESSAGE)));
+        ((TextView) view.findViewById(R.id.msg)).setText(cursor.getString(cursor.getColumnIndex(TableContract.MessagesContract.COLUMN_MESSAGE)));
 
         String time = cursor.getString(cursor.getColumnIndex(TableContract.MessagesContract.COLUMN_TIME));
         String date = cursor.getString(cursor.getColumnIndex(TableContract.MessagesContract.COLUMN_DATE));
@@ -37,15 +37,15 @@ public class UpdatesCursorAdapter extends CursorAdapter {
         Date d = new Date();
         String today = df.format(d);
         // Date formating: hh-mm, "Yesterday" or dd-MM
-        if(today.equalsIgnoreCase(date))
-            ((TextView)view.findViewById(R.id.time)).setText(time);
+        if (today.equalsIgnoreCase(date))
+            ((TextView) view.findViewById(R.id.time)).setText(time);
         else {
-             int todayInt = Integer.parseInt(today.split("-")[0]);
-             int dateInt = Integer.parseInt(date.split("-")[0]);
-            if(dateInt-todayInt==1)
-                ((TextView)view.findViewById(R.id.time)).setText("Yesterday");
+            int todayInt = Integer.parseInt(today.split("-")[0]);
+            int dateInt = Integer.parseInt(date.split("-")[0]);
+            if (dateInt - todayInt == 1)
+                ((TextView) view.findViewById(R.id.time)).setText("Yesterday");
             else
-                ((TextView)view.findViewById(R.id.time)).setText(date);
+                ((TextView) view.findViewById(R.id.time)).setText(date);
         }
     }
 

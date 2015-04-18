@@ -10,25 +10,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.teamidentiti.parichay2015.Adapters.UpdatesCursorAdapter;
 import com.teamidentiti.parichay2015.Database.Provider;
 import com.teamidentiti.parichay2015.Database.TableContract;
 import com.teamidentiti.parichay2015.R;
-import com.teamidentiti.parichay2015.Adapters.UpdatesCursorAdapter;
 
 
 public class UpdatesFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
-    private ListView list;
+    private ListView listView;
     private UpdatesCursorAdapter updatesAdapter;
+    private TextView checkBackLater;
 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_updates_results_points, container, false);
         view.setBackgroundColor(getActivity().getResources().getColor(R.color.colorUpdatesFragment));
 
-        list = (ListView)view.findViewById(R.id.list);
+        checkBackLater = (TextView)view.findViewById(R.id.check_back_later);
+        listView = (ListView)view.findViewById(R.id.list);
         updatesAdapter = new UpdatesCursorAdapter(getActivity(), null, 0);
-        list.setAdapter(updatesAdapter);
+        listView.setAdapter(updatesAdapter);
         getLoaderManager().initLoader(1, null, this);
 
         return view;
@@ -41,6 +44,10 @@ public class UpdatesFragment extends Fragment implements LoaderManager.LoaderCal
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+        if(data.getCount()==0)
+            checkBackLater.setVisibility(View.VISIBLE);
+        else
+            checkBackLater.setVisibility(View.GONE);
         updatesAdapter.swapCursor(data);
     }
 

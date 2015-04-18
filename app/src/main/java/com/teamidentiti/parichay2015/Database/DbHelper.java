@@ -32,7 +32,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
         final String POINTS_CREATE_STATEMENT = "CREATE TABLE "+ TableContract.PointsContract.TABLE_NAME+" ("
                 + TableContract.PointsContract._ID+" INTEGER PRIMARY KEY, "
-                + TableContract.PointsContract.COLUMN_EVENT+" TEXT NOT NULL, "
+                + TableContract.PointsContract.COLUMN_BRANCH+" TEXT NOT NULL, "
                 + TableContract.PointsContract.COLUMN_POINTS+" TEXT NOT NULL)";
         db.execSQL(POINTS_CREATE_STATEMENT);
     }

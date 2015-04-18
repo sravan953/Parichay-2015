@@ -26,8 +26,8 @@ public class PointsCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        ((TextView)view.findViewById(R.id.event)).setText(cursor.getString(cursor.getColumnIndex(TableContract.PointsContract.COLUMN_EVENT)));
-        ((TextView)view.findViewById(R.id.event)).setText(cursor.getString(cursor.getColumnIndex(TableContract.PointsContract.COLUMN_POINTS)));
+        ((TextView)view.findViewById(R.id.branch)).setText(cursor.getString(cursor.getColumnIndex(TableContract.PointsContract.COLUMN_BRANCH)));
+        ((TextView)view.findViewById(R.id.points)).setText(cursor.getString(cursor.getColumnIndex(TableContract.PointsContract.COLUMN_POINTS)));
     }
 
     @Override

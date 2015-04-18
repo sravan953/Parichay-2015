@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
-import android.transition.Explode;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -38,8 +37,6 @@ public class MainActivity extends ActionBarActivity implements ViewPager.PageTra
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(getResources().getColor(R.color.colorUpdatesFragmentDark));
             window.setNavigationBarColor(getResources().getColor(R.color.colorUpdatesFragmentDark));
-            window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-            window.setExitTransition(new Explode());
         }
         super.onCreate(savedInstanceState);
 
@@ -101,8 +98,7 @@ public class MainActivity extends ActionBarActivity implements ViewPager.PageTra
         else {
             slidingTabLayout.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
-                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                }
+                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
 
                 @Override
                 public void onPageSelected(int position) {
@@ -113,8 +109,7 @@ public class MainActivity extends ActionBarActivity implements ViewPager.PageTra
                 }
 
                 @Override
-                public void onPageScrollStateChanged(int state) {
-                }
+                public void onPageScrollStateChanged(int state) {}
             });
         }
 

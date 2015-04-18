@@ -76,11 +76,11 @@ public class Provider extends ContentProvider {
         db = dbHelper.getWritableDatabase();
         int id = 0;
         if(uriMatcher.match(uri)==1)
-            id = db.update(TableContract.MessagesContract.TABLE_NAME, values, null, null);
+            id = db.update(TableContract.MessagesContract.TABLE_NAME, values, selection, selectionArgs);
         else if(uriMatcher.match(uri)==2)
-            id = db.update(TableContract.ResultsContract.TABLE_NAME, values, null, null);
+            id = db.update(TableContract.ResultsContract.TABLE_NAME, values, selection, selectionArgs);
         else
-            id = db.update(TableContract.PointsContract.TABLE_NAME, values, null, null);
+            id = db.update(TableContract.PointsContract.TABLE_NAME, values, selection, selectionArgs);
         getContext().getContentResolver().notifyChange(uri, null);
         return id;
     }

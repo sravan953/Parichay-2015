@@ -36,9 +36,8 @@ public class EventsArrayAdapter<E> extends ArrayAdapter<String> {
         ((TextView) convertView.findViewById(R.id.venue)).setText(mData.get(position+1));
         ((TextView) convertView.findViewById(R.id.time)).setText(mData.get(position+3));
 
-        float currentY = convertView.getY();
-        convertView.setTranslationY(currentY+500);
-        convertView.animate().translationYBy(-500f).start();
+        convertView.setAlpha(0f);
+        convertView.animate().alpha(1f).start();
         return convertView;
     }
 
