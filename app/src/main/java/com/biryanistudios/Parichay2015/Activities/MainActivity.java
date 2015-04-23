@@ -1,4 +1,4 @@
-package com.teamidentiti.parichay2015.Activities;
+package com.biryanistudios.Parichay2015.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,11 +12,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.teamidentiti.parichay2015.EventsIntentService;
-import com.teamidentiti.parichay2015.GCM.RegistrationsIntentService;
-import com.teamidentiti.parichay2015.R;
-import com.teamidentiti.parichay2015.SlidingTabs.SimplePagerAdapter;
-import com.teamidentiti.parichay2015.SlidingTabs.SlidingTabLayout;
+import com.biryanistudios.Parichay2015.EventsIntentService;
+import com.biryanistudios.Parichay2015.GCM.RegistrationsIntentService;
+import com.biryanistudios.Parichay2015.R;
+import com.biryanistudios.Parichay2015.SlidingTabs.SimplePagerAdapter;
+import com.biryanistudios.Parichay2015.SlidingTabs.SlidingTabLayout;
 
 import java.util.List;
 

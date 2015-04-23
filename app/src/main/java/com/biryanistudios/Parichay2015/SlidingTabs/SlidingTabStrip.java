@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.teamidentiti.parichay2015.SlidingTabs;
+package com.biryanistudios.Parichay2015.SlidingTabs;
 
 import android.R;
 import android.content.Context;

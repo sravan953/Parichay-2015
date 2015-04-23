@@ -1,4 +1,4 @@
-package com.teamidentiti.parichay2015.Adapters;
+package com.biryanistudios.Parichay2015.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.teamidentiti.parichay2015.R;
+import com.biryanistudios.Parichay2015.R;
 
 import java.util.List;
 

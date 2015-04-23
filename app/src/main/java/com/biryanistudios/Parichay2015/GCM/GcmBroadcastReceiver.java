@@ -1,4 +1,4 @@
-package com.teamidentiti.parichay2015.GCM;
+package com.biryanistudios.Parichay2015.GCM;
 
 import android.app.Activity;
 import android.content.ComponentName;

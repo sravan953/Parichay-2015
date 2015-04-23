@@ -1,4 +1,4 @@
-package com.teamidentiti.parichay2015.GCM;
+package com.biryanistudios.Parichay2015.GCM;
 
 import android.app.IntentService;
 import android.app.Notification;
@@ -11,10 +11,10 @@ import android.database.Cursor;
 import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
-import com.teamidentiti.parichay2015.Activities.MainActivity;
-import com.teamidentiti.parichay2015.Database.Provider;
-import com.teamidentiti.parichay2015.Database.TableContract;
-import com.teamidentiti.parichay2015.R;
+import com.biryanistudios.Parichay2015.Activities.MainActivity;
+import com.biryanistudios.Parichay2015.Database.Provider;
+import com.biryanistudios.Parichay2015.Database.TableContract;
+import com.biryanistudios.Parichay2015.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

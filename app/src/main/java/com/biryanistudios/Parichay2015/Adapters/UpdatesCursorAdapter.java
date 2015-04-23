@@ -1,4 +1,4 @@
-package com.teamidentiti.parichay2015.Adapters;
+package com.biryanistudios.Parichay2015.Adapters;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
-import com.teamidentiti.parichay2015.Database.TableContract;
-import com.teamidentiti.parichay2015.R;
+import com.biryanistudios.Parichay2015.Database.TableContract;
+import com.biryanistudios.Parichay2015.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

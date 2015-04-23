@@ -1,10 +1,10 @@
-package com.teamidentiti.parichay2015;
+package com.biryanistudios.Parichay2015;
 
 import android.app.IntentService;
 import android.content.Intent;
 import android.support.v4.content.LocalBroadcastManager;
 
-import com.teamidentiti.parichay2015.Activities.MainActivity;
+import com.biryanistudios.Parichay2015.Activities.MainActivity;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

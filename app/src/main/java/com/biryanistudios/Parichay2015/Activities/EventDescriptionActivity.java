@@ -1,4 +1,4 @@
-package com.teamidentiti.parichay2015.Activities;
+package com.biryanistudios.Parichay2015.Activities;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -9,7 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.teamidentiti.parichay2015.R;
+import com.biryanistudios.Parichay2015.R;
 
 /**
  * Created by Sravan on 4/15/2015.

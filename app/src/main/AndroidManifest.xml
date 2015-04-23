@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.teamidentiti.parichay2015" >
+    package="com.biryanistudios.Parichay2015" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -9,9 +9,9 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
-    <permission android:name="com.teamidentiti.parichay2015.permission.C2D_MESSAGE"
+    <permission android:name="com.biryanistudios.Parichay2015.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.teamidentiti.parichay2015.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.biryanistudios.Parichay2015.permission.C2D_MESSAGE" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Activities.MainActivity"
+            android:name="com.biryanistudios.Parichay2015.Activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,25 +29,25 @@
         </activity>
 
         <activity
-            android:name=".Activities.EventDescriptionActivity"
-            android:parentActivityName=".Activities.MainActivity"/>
+            android:name="com.biryanistudios.Parichay2015.Activities.EventDescriptionActivity"
+            android:parentActivityName="com.biryanistudios.Parichay2015.Activities.MainActivity"/>
 
         <receiver
-            android:name=".GCM.GcmBroadcastReceiver"
+            android:name="com.biryanistudios.Parichay2015.GCM.GcmBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="com.teamidentiti.parichay2015" />
+                <category android:name="com.biryanistudios.Parichay2015" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".GCM.GcmIntentService" />
-        <service android:name=".GCM.RegistrationsIntentService" />
-        <service android:name=".EventsIntentService" />
+        <service android:name="com.biryanistudios.Parichay2015.GCM.GcmIntentService" />
+        <service android:name="com.biryanistudios.Parichay2015.GCM.RegistrationsIntentService" />
+        <service android:name="com.biryanistudios.Parichay2015.EventsIntentService" />
 
         <provider
-            android:authorities="com.teamidentiti.Parichay2015"
-            android:name=".Database.Provider" />
+            android:authorities="com.biryanistudios.Parichay2015"
+            android:name="com.biryanistudios.Parichay2015.Database.Provider" />
     </application>
 
 </manifest>

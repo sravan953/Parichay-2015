@@ -1,4 +1,4 @@
-package com.teamidentiti.parichay2015.Fragments;
+package com.biryanistudios.Parichay2015.Fragments;
 
 
 import android.app.ActivityOptions;
@@ -17,10 +17,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
-import com.teamidentiti.parichay2015.Activities.EventDescriptionActivity;
-import com.teamidentiti.parichay2015.Activities.MainActivity;
-import com.teamidentiti.parichay2015.Adapters.EventsArrayAdapter;
-import com.teamidentiti.parichay2015.R;
+import com.biryanistudios.Parichay2015.Activities.EventDescriptionActivity;
+import com.biryanistudios.Parichay2015.Activities.MainActivity;
+import com.biryanistudios.Parichay2015.Adapters.EventsArrayAdapter;
+import com.biryanistudios.Parichay2015.R;
 
 
 public class EventsFragment extends Fragment implements ListView.OnItemClickListener {

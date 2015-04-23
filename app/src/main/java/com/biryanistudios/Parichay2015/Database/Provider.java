@@ -1,4 +1,4 @@
-package com.teamidentiti.parichay2015.Database;
+package com.biryanistudios.Parichay2015.Database;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -12,7 +12,7 @@ import android.net.Uri;
  * Created by Sravan on 3/29/2015.
  */
 public class Provider extends ContentProvider {
-    private static final String AUTHORITIES = "com.teamidentiti.Parichay2015";
+    private static final String AUTHORITIES = "com.biryanistudios.Parichay2015";
     private static final Uri BASE_CONTENT_URI = Uri.parse("content://"+AUTHORITIES);
     public static final Uri MESSAGES_CONTENT_URI = BASE_CONTENT_URI.buildUpon().appendPath("Messages").build();
     public static final Uri RESULTS_CONTENT_URI = BASE_CONTENT_URI.buildUpon().appendPath("Results").build();

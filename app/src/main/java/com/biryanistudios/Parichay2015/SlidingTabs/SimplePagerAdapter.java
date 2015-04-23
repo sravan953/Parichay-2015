@@ -1,14 +1,14 @@
-package com.teamidentiti.parichay2015.SlidingTabs;
+package com.biryanistudios.Parichay2015.SlidingTabs;
 
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.teamidentiti.parichay2015.Fragments.EventsFragment;
-import com.teamidentiti.parichay2015.Fragments.PointsFragment;
-import com.teamidentiti.parichay2015.Fragments.ResultsFragment;
-import com.teamidentiti.parichay2015.Fragments.UpdatesFragment;
+import com.biryanistudios.Parichay2015.Fragments.EventsFragment;
+import com.biryanistudios.Parichay2015.Fragments.PointsFragment;
+import com.biryanistudios.Parichay2015.Fragments.ResultsFragment;
+import com.biryanistudios.Parichay2015.Fragments.UpdatesFragment;
 
 /**
  * Created by Sravan on 4/4/2015.

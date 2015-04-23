@@ -1,4 +1,4 @@
-package com.teamidentiti.parichay2015.Database;
+package com.biryanistudios.Parichay2015.Database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

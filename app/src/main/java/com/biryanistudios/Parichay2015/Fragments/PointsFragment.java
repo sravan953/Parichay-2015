@@ -1,4 +1,5 @@
-package com.teamidentiti.parichay2015.Fragments;
+package com.biryanistudios.Parichay2015.Fragments;
+
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -12,34 +13,34 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.teamidentiti.parichay2015.Adapters.UpdatesCursorAdapter;
-import com.teamidentiti.parichay2015.Database.Provider;
-import com.teamidentiti.parichay2015.Database.TableContract;
-import com.teamidentiti.parichay2015.R;
+import com.biryanistudios.Parichay2015.Adapters.PointsCursorAdapter;
+import com.biryanistudios.Parichay2015.Database.Provider;
+import com.biryanistudios.Parichay2015.Database.TableContract;
+import com.biryanistudios.Parichay2015.R;
 
 
-public class UpdatesFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
+public class PointsFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>  {
     private ListView listView;
-    private UpdatesCursorAdapter updatesAdapter;
+    private PointsCursorAdapter pointsAdapter;
     private TextView checkBackLater;
 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_updates_results_points, container, false);
-        view.setBackgroundColor(getActivity().getResources().getColor(R.color.colorUpdatesFragment));
+        view.setBackgroundColor(getActivity().getResources().getColor(R.color.colorPointsFragment));
 
         checkBackLater = (TextView)view.findViewById(R.id.check_back_later);
         listView = (ListView)view.findViewById(R.id.list);
-        updatesAdapter = new UpdatesCursorAdapter(getActivity(), null, 0);
-        listView.setAdapter(updatesAdapter);
-        getLoaderManager().initLoader(1, null, this);
+        pointsAdapter = new PointsCursorAdapter(getActivity(), null, 0);
+        listView.setAdapter(pointsAdapter);
+        getLoaderManager().initLoader(3, null, this);
 
         return view;
     }
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-        return new CursorLoader(getActivity(), Provider.MESSAGES_CONTENT_URI, null, null, null, TableContract.MessagesContract._ID+" DESC");
+        return new CursorLoader(getActivity(), Provider.POINTS_CONTENT_URI, null, null, null, TableContract.PointsContract.COLUMN_POINTS+" DESC");
     }
 
     @Override
@@ -48,11 +49,11 @@ public class UpdatesFragment extends Fragment implements LoaderManager.LoaderCal
             checkBackLater.setVisibility(View.VISIBLE);
         else
             checkBackLater.setVisibility(View.GONE);
-        updatesAdapter.swapCursor(data);
+        pointsAdapter.swapCursor(data);
     }
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
-        updatesAdapter.swapCursor(null);
+        pointsAdapter.swapCursor(null);
     }
 }
