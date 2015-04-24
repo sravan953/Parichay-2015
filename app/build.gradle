@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.teamidentiti.parichay2015"
+        applicationId "com.biryanistudio.Parichay2015"
         minSdkVersion 17
         targetSdkVersion 21
         versionCode 1

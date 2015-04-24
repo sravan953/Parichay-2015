@@ -4,7 +4,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical" >
 
-    <com.biryanistudios.Parichay2015.SlidingTabs.SlidingTabLayout
+    <com.biryanistudio.Parichay2015.SlidingTabs.SlidingTabLayout
         android:id="@+id/sliding_tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
